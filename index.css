@@ -1,0 +1,132 @@
+.cat-image
+{
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.cat-card
+{
+    border: 1px solid #e8e8e8;
+    display: inline-block;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 8px;
+    color: #707070;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 8px 1px rgba(150, 150, 150, .65);
+}
+
+.cat-card div
+{
+    padding: 0 10px;
+}
+
+.cat-card div p
+{
+    margin: 0;
+}
+
+.cat-card div a
+{
+    font-weight: normal;
+    color: #333;
+    margin: 7px 0;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cat-card div a:hover
+{
+    color: lightpink;
+}
+
+.short-description .cat-status
+{
+    margin: 15px 0;
+}
+
+.full-description
+{
+    margin: 8px 0 20px;
+    display: none;
+}
+
+@media (max-width: 476px)
+{
+    .cat-card
+    {
+        display: block;
+        margin: 8px auto;
+    }
+}
+
+.radio-switcher
+{
+    display: none;
+}
+
+.icon
+{
+    font-size: 24em;
+}
+
+input + label
+{
+    cursor: pointer;
+    margin: 0 16px;
+    font-size: 45px;
+    color: #908db2;
+}
+
+input + label:hover
+{
+    color: #bb97db;
+}
+
+input:checked + label
+{
+    display: none;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card
+{
+    display: block;
+    max-width: 500px;
+    min-width: 500px;
+    margin: 35px auto;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card div a
+{
+    width: 480px;
+    overflow: visible;
+    white-space: unset;
+    text-overflow: clip;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card .cat-image
+{
+    width: 500px;
+    height: 350px;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card .short-description
+{
+    display: none;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card .full-description
+{
+    display: block;
+}
