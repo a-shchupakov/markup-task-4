@@ -7,6 +7,7 @@
 
 .cat-card
 {
+    position: relative;
     border: 1px solid #e8e8e8;
     display: inline-block;
     max-width: 200px;
@@ -17,9 +18,21 @@
     font-size: 15px;
 }
 
-.cat-card:hover
+.cat-card::after
 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 0 8px 1px rgba(150, 150, 150, .65);
+    opacity: 0;
+}
+
+.cat-card:hover::after
+{
+    opacity: 1;
 }
 
 .cat-card div
